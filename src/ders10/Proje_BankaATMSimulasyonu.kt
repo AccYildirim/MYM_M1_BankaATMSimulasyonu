@@ -11,7 +11,7 @@ fun main() {
     println("***** KOTLİN BANK'A HOŞ GELDİNİZ *****")
 
     while (denemeHakki > 0) {
-        println("Lütfen Şifrenizi Giriniz: ")
+        println("--------------------------------------\nLütfen Şifrenizi Giriniz: ")
         val kullaniciGirdisi = readln().trim()
 
         if (kullaniciGirdisi == dogruSifre) {
@@ -34,6 +34,7 @@ fun main() {
         do {
             println(
                 """
+                ------------------------    
                 ----- İŞLEM MENÜSÜ -----
                 1.BAKİYE SORGULAMA
                 2.PARA YATIRMA
@@ -47,7 +48,7 @@ fun main() {
                 "1" -> println("Mevcut Bakiyeniz: $bakiye TL")
 
                 "2" -> {
-                    print("Yatırmak İstediğiniz Tutarı Girin: ")
+                    print("\nYatırmak İstediğiniz Tutarı Girin: ")
                     val yatirilanPara = readln().toDoubleOrNull() ?: 0.0
                     if (yatirilanPara <= 0) {
                         println("Geçersiz Tutar Girdiniz!")
@@ -58,7 +59,7 @@ fun main() {
                 }
 
                 "3" -> {
-                    print("Çekmek İstediğiniz Tutarı Girin: ")
+                    print("\nÇekmek İstediğiniz Tutarı Girin: ")
                     val cekilenPara = readln().toDoubleOrNull() ?: 0.0
                     if (cekilenPara <= 0) {
                         println("Geçersiz Tutar Girdiniz!")
@@ -71,11 +72,11 @@ fun main() {
                 }
 
                 "4" -> {
-                    println("Çıkış Yapılıyor. İyi GÜnler Dileriz...")
+                    println("\nÇıkış Yapılıyor. İyi GÜnler Dileriz...")
                     break
                 }
 
-                else -> println("Geçersiz İşlem!")
+                else -> println("\nGeçersiz İşlem!")
             }
 
         } while (true)
